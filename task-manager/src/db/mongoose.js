@@ -1,0 +1,11 @@
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/task-manager-api')
+
+const Task = mongoose.model('Task', {
+    description: {
+        type: String
+    },
+    completed: {
+        type: Boolean
+    }
+})
