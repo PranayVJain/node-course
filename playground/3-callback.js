@@ -1,11 +1,11 @@
-sum = (x, y, callback) => {
+const doWork = (callback) => {
+
     setTimeout(() => {
-        callback(x + y)
+        callback(undefined, 'Success')
     }, 2000)
+
 }
 
-sum(3, 4, (result) => {
-    console.log('Sum is ' + result)
+doWork((error, response) => {
+    console.log(response)
 })
-
-//1. Why is this a problem. i.e function call should be after the function is defined.

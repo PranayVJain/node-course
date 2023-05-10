@@ -5,7 +5,7 @@ const forecast = require('./utils/forecast.js')
 
 const app = express()
 
-const port = process.env.PORT || 3000 
+const port = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname, '../public')))
 
@@ -23,10 +23,7 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Welcome to help page'
-    })
+app.get('/help', async (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
